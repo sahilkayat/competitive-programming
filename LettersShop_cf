@@ -1,0 +1,41 @@
+/*
+Problem Link -- https://codeforces.com/contest/1187/problem/B
+Platform  -- Codeforces
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+      string s,str;int n,k;
+      cin>>n>>s>>k;
+      map<string,int>m1;
+      while(k--)
+      {
+        cin>>str;
+        map<char,int>m;
+        if(m1.find(str)==m1.end()){
+        for(int i=0;i<str.length();i++)
+            m[str[i]]++;
+        for(int i=0;i<s.length();i++)
+        { 
+            if(m.find(s[i])!=m.end())
+            {
+                m[s[i]]--;
+                if(m[s[i]]==0)
+                    m.erase(s[i]);
+            }
+            if(m.size()==0){
+                cout<<i+1<<"\n";
+                m1[str]=i+1;
+                break;
+            }
+        }
+        }
+        else
+            cout<<m1[str]<<"\n";
+      }
+
+}
