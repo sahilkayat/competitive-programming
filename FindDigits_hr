@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+ long int n,a,count=0;
+ int t;
+ cin>>t;
+ 
+ while(t>0)
+ {
+     cin>>n;
+    long int num=n;
+    count=0;
+    while(n>0){
+    a=n%10;
+//    cout<<a<<" "<<n<<endl;
+    if(a!=0 && num%a==0){
+//    cout<<"\na "<<a<<endl;
+    count=count+1;
+    }
+    n=n/10;
+//    cout<<"\nn "<<n<<endl;
+     }
+     cout<<count<<endl;
+     t--;
+     }
+ }
