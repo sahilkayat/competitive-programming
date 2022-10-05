@@ -1,0 +1,28 @@
+/*Platform -- codeforces
+problem link -- https://codeforces.com/contest/25/problem/A
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,x;
+    cin>>n;
+    map<int,int>m1,m2;
+    for(int i=0;i<n;i++){
+        cin>>x;
+        if(x%2 == 0)
+            m1.insert({i+1,x});
+        else 
+            m2.insert({i+1,x});
+    }
+    if(m1.size()==1)
+    {
+        auto it=m1.begin();
+        cout<<it->first;
+    }
+    else{
+    auto it=m2.begin();
+    cout<<it->first;
+    }
+}
