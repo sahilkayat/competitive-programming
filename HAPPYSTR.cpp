@@ -1,4 +1,5 @@
 //CodeChef Problem Code: HAPPYSTR
+link: https://www.codechef.com/submit/HAPPYSTR
 #include <iostream>
 using namespace std;
 #define el "\n";
